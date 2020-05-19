@@ -24,7 +24,7 @@ const vals = rawData.Sheets.values
 
 const xrate = rawData.Sheets.xrate
 
-const days = 500
+const days = 1300
 
 for (i = 2; i < days; i++) {
   Mt[i - 2] = vals[`B${i}`].v * vals[`C${i}`].v * vals[`D${i}`].v +

@@ -16,6 +16,8 @@ Per far partire il server:
 
 L'applicazione sara' raggiungibile all'indirizzo `http://localhost:8000/`
 
+Una volta raggiunta l'applicazione cliccare sul pulsante carica dati
+
 Per testare l'applicazione:
 
 `yarn test`

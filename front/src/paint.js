@@ -1,7 +1,7 @@
 import { indexValues } from './indexValues.mjs'
 
 const data = {
-  labels: Array.from({ length: 500 }, (_, i) => i),
+  labels: Array.from({ length: indexValues.length }, (_, i) => i),
   datasets: [
     {
       name: 'index value',
