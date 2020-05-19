@@ -1,0 +1,16 @@
+{
+  "name": "xtal",
+  "version": "0.0.1",
+  "description": "xtal challange",
+  "main": "index.js",
+  "author": "Alberto Esposito <alberto.websci@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dataRun": "node back/dataRun.mjs",
+    "serve": "node front/index.mjs"
+  },
+  "dependencies": {
+    "xlsx": "^0.16.1"
+  }
+}
