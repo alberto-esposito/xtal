@@ -8,25 +8,26 @@ const paint = fs.readFileSync('./front/src/paint.js')
 const values = fs.readFileSync('./front/src/indexValues.mjs')
 
 const server = http.createServer((req, res) => {
-    console.log(req.url)
-    switch(req.url) {
-        case '/':
-            res.write(index)
-            break
-        case '/paint.js':
-            res.setHeader('content-type', 'text/javascript')
-            res.write(paint)
-            break
-        case '/indexValues.mjs':
-            res.setHeader('content-type', 'text/javascript')
-            res.write(values)
-            break
-    }
-    res.end()
+  console.log(req.url)
+  switch (req.url) {
+    case '/':
+      res.write(index)
+      break
+    case '/paint.js':
+      res.setHeader('content-type', 'text/javascript')
+      res.write(paint)
+      break
+    case '/indexValues.mjs':
+      res.setHeader('content-type', 'text/javascript')
+      res.write(values)
+      break
+  }
+  res.end()
 })
 
 server.on('clientError', (err, socket) => {
-    socket.end('HTTP/1.1 400 Bad Request\r\n\r\n');
+  console.log({ err })
+  socket.end('HTTP/1.1 400 Bad Request\r\n\r\n')
 })
 
 server.listen(8000)

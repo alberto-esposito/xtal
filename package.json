@@ -8,9 +8,14 @@
   "private": true,
   "scripts": {
     "dataRun": "node back/dataRun.mjs",
-    "serve": "node front/index.mjs"
+    "serve": "node front/index.mjs",
+    "test": "standard"
   },
   "dependencies": {
     "xlsx": "^0.16.1"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "standard": "^14.3.4"
   }
 }
