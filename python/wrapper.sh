@@ -1,3 +1,4 @@
 #!/bin/bash
-echo $PWD
-python3 python/hello.py
+cd python
+source venv/bin/activate
+python3 hello.py
