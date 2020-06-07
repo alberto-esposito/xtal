@@ -16,9 +16,12 @@ const server = http.createServer((req, res) => {
       break
     case '/compute':
       console.log('compute...\n')
-      const python = spawn('python3', [' --version'])
+      // console.log( process.env.PATH )
+      const python = spawn('./python/wrapper.sh')
 
-      python.on('data', (data) => console.log(` ${data}`))
+      python.stdout.on('data', (data) => console.log(` ${data}`))
+
+      python.stderr.on('data', (data) => console.log(`error ${data}`))
 
       python.on('close', (code) => console.log(`\ncompute ended with code ${code}`))
 
