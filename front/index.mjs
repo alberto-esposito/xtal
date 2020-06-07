@@ -1,5 +1,6 @@
 import http from 'http'
 import fs from 'fs'
+import {spawn} from 'child_process'
 
 const index = fs.readFileSync('./front/src/index.html')
 
@@ -15,7 +16,12 @@ const server = http.createServer((req, res) => {
       break
     case '/compute':
       console.log('compute...\n')
-      res.write('{a: 2}')
+      const python = spawn('python3', [' --version'])
+
+      python.on('data', (data) => console.log(` ${data}`))
+
+      python.on('close', (code) => console.log(`\ncompute ended with code ${code}`))
+
       break
     case '/paint.js':
       res.setHeader('content-type', 'text/javascript')
