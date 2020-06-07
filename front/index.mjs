@@ -13,6 +13,10 @@ const server = http.createServer((req, res) => {
     case '/':
       res.write(index)
       break
+    case '/compute':
+      console.log('compute...\n')
+      res.write('{a: 2}')
+      break
     case '/paint.js':
       res.setHeader('content-type', 'text/javascript')
       res.write(paint)

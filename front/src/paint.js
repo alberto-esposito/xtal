@@ -11,6 +11,19 @@ const data = {
   ]
 }
 
+const computeButton = document.getElementById('computeData')
+
+computeButton.addEventListener('click', e => {
+
+  fetch('http://localhost:8000/compute')
+    .then(res => res.text())
+    .then(data => console.log({data}))
+    .catch(err => console.log({err}))
+
+
+})
+
+
 const loadButton = document.getElementById('loadData')
 
 loadButton.addEventListener('click', e => {
