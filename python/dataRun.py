@@ -31,4 +31,4 @@ Mt = values['APPLE'] * values['APPLE - NUMBER OF SHARES'] * values['APPLE - FREE
      values['DEUTSCHE POST'] * values['DEUTSCHE POST - NUMBER OF SHARES'] * values['DEUTSCHE POST - FREE FLOAT NOSH'] / 100 + \
      values['JOHNSON & JOHNSON'] * values['JOHNSON & JOHNSON - NUMBER OF SHARES'] * values['JOHNSON & JOHNSON - FREE FLOAT NOSH'] / 100
 
-print(f"Excel file: {Mt} ")
+Mt.to_csv('index.csv', index=False)

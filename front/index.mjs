@@ -1,6 +1,9 @@
 import http from 'http'
 import fs from 'fs'
-import {spawn} from 'child_process'
+import util from 'util'
+import {spawn, exec} from 'child_process'
+
+const asyncExec = util.promisify(exec)
 
 const index = fs.readFileSync('./front/src/index.html')
 
