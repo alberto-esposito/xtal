@@ -7,7 +7,7 @@ xl = pd.ExcelFile(file_path)
 
 sheetname = xl.sheet_names[2]
 
-nrows = 1307
+nrows = 10
 
 # currency = pd.read_excel(file_path, sheet_name=0, skiprows=1)
 
@@ -31,4 +31,4 @@ Mt = values['APPLE'] * values['APPLE - NUMBER OF SHARES'] * values['APPLE - FREE
      values['DEUTSCHE POST'] * values['DEUTSCHE POST - NUMBER OF SHARES'] * values['DEUTSCHE POST - FREE FLOAT NOSH'] / 100 + \
      values['JOHNSON & JOHNSON'] * values['JOHNSON & JOHNSON - NUMBER OF SHARES'] * values['JOHNSON & JOHNSON - FREE FLOAT NOSH'] / 100
 
-Mt.to_csv('index.csv', index=False)
+Mt.to_csv('index2.csv', index=False)
